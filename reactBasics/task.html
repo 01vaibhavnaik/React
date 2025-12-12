@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="container1"></div>
+    <div class="container2"></div>
+    <div class="container3"></div>
+
+    <script src="http://127.0.0.1:5500/react-basics.html">
+    </script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>  
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        
+        const div=(
+            <div>
+                <p>Cotton Socks </p>
+                <p>Price: $10</p>
+                <button>Add To Cart</button>  
+            </div>
+        );
+        const container=document.querySelector('.container');
+        ReactDOM.createRoot(container).render(div);
+
+        const Shirt= 10;
+        const socks=8;
+        const div1=(
+            <div><p>The Total price Is :{Shirt + 2*socks}</p>
+            </div>
+        );
+        const container1=document.querySelector('.container1');
+        ReactDOM.createRoot(container1).render(div1);
+
+
+        var productCost=10;
+        var shippingCost=8;
+         const Product=(
+            <div>
+                <p>Product Cost :{productCost} </p>
+                <p>Shipping Cost :{shippingCost} </p>
+                <p>Total Cost :{productCost+shippingCost} </p>
+            </div>
+        );
+        const container2=document.querySelector('.container2');
+        ReactDOM.createRoot(container2).render(Product);
+
+        var date =dayjs().format('MMMM D');
+        var paragraph= <p> Todays Date is :{date}</p>
+        const container3=document.querySelector('.container3');
+        ReactDOM.createRoot(container3).render(paragraph);
+    </script>
+  </body>
+</html>
