@@ -8,6 +8,7 @@
     <div class="container1"></div>
     <div class="container2"></div>
     <div class="container3"></div>
+    <div class="container4"></div>
 
     <script src="http://127.0.0.1:5500/react-basics.html">
     </script>
@@ -53,6 +54,11 @@
         var paragraph= <p> Todays Date is :{date}</p>
         const container3=document.querySelector('.container3');
         ReactDOM.createRoot(container3).render(paragraph);
+
+        var days= dayjs().format('HH:mm:ss');
+        const container4=document.querySelector('.container4');
+        ReactDOM.createRoot(container4).root.render(days);
+        
     </script>
   </body>
 </html>
